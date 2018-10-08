@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Compose</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Send Mail</h1>
+      <br>
+      <form action="" method="post">
+        <input type="text" placeholder="Reciever" name="to" value="{{
+          request.form.to }}">
+         <input type="text" placeholder="Message" name="messg" value="{{
+          request.form.messg }}">
+        <input class="btn btn-default" type="submit" value="Send">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}</p>
+      {% endif %}
+    </div>
+    <div>
+      <a href = "/report">Report</a>
+    </div>
+  </body>
+</html>

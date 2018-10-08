@@ -1,0 +1,17 @@
+<html>
+  <h1> The details of mails sent by you </h1>
+  <table class = "table table-bordered">
+      <tr>
+        <th>From</th>
+        <th>To</th>
+        <th>Body</th>
+      </tr>
+
+      {% for item in res %}
+          <tr>
+            <td>{{item.sender}}</td>
+            <td>{{item.recipient}}</td>
+            <td>{{item.messg}}</td>
+          </tr>
+      {% endfor %}
+  </table>
